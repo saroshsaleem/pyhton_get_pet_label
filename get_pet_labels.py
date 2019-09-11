@@ -41,8 +41,8 @@ def get_pet_labels(image_dir):
             pet_labels = "" 
             
             filename_end_list=filename_list[idx] #('/')[-1]
-            filename_no_dot=filename_list[idx].split('.')[0]
-            word_list_pet_image = filename_list[idx].split("_")
+            filename_no_dot=filename_end_list.split('.')[0]
+            word_list_pet_image = filename_no_dot.split("_")
             word_list_pet_label=" ".join(word_list_pet_image)
             for word in word_list_pet_label:
                if word.isalpha():
